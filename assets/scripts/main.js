@@ -88,6 +88,8 @@ function initFormHandler() {
     
     mainEl.append(recipeCard);
     let array = getRecipesFromStorage();
+    if (array == null)
+      array = [];
     array.push(recipe);
     saveRecipesToStorage(array);
   });
